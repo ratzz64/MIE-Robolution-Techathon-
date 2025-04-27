@@ -1,0 +1,16 @@
+Q2.Enhance your API to support extreme scalability, processing numerous simultaneous orders without data loss, and explain your strategies.
+	Answer:
+	
+Strategy for extreme scalability---
+	1.API Gateway and Load balancer
+		we can use API gateway front of our servers and behind it load balancers for controlling traffic. It ill avoid servers from overloading during peak hours
+	2.Microservice Architecture
+		We can split the system into order,inventory and payment servie and they will work independently based on load and authentication
+	3.Horizontal scaling of Database
+		We can use to read replica to spread the reading load and use sharding for datasets and also can use noSQL for fast operations.
+	4.Retry Mechanism
+		fault tolarent design includes retry mechanism if queue fail.
+	5.Monitoring and Auto scaling
+		We could use monitors for order rate,API server CPU and Queue depth and use cloud autoscaling to spin up more servers during spikes
+		
+	The main point of extreme scalability comes down to "Scale out, not up" Rule that encourages to add more servers not bigger ones.also using async queues and smart cache and monitors.
