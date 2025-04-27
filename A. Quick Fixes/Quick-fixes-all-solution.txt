@@ -1,0 +1,29 @@
+Q1.List three essential features Bistro 92’s system needs for customer satisfaction and efficient order processing.
+Answer:
+	1.Seamless Menu Navigation:A seamless navigation menu ensures customer satisfaction.
+	2.Real-Time Order Status Tracking: If the order tracking is done in real time it will reduce service time significantly resulting in customer satisfaction. 
+	3.Food and Waiter Review:For more customer satisfaction there could be a review system for both the food and the waiter assigned to the table.
+
+Q2.Describe two design principles to make the smart pad interface intuitive for all users, including tech novices.
+Answer:
+	1.Simplicity and Clarity: Use large, clearly labeled buttons and a minimalistic interface with limited choices per screen to avoid overwhelming users.
+	2.Consistent Navigation: Maintain consistent layouts and actions (e.g., always using the same button to confirm selections) so users can predict system behavior easily.
+
+Q3.Identify three potential security vulnerabilities in Bistro 92’s system and suggest one solution for each.
+Answer: 
+	1.Unauthorized Device Access:There are many potential device that can mimic its way into the system and make gibberish order or to overflow the system.
+		Solution: There can be some authentication process for each device. Besides all the device could be programmed to only connect to a local network to access the database.
+				also the database can be programmed with the IP or MAC addresses of the local devices so that no other device can place orders.
+	2.Order Tampering via Network Interception:
+		Solution: all the data sent from and recieved can be encrypted using TLS.
+	3.Physical Theft or Tampering of Devices:
+		Solution: The devices can be physically locked on the table and also an web based wipe protocol if anyone stoles them.
+Q4.Explain two strategies to keep Bistro 92’s system responsive and stable during peak hours.
+	1.Load Balancing: Distribute incoming order traffic across multiple cloud servers to prevent any single server from becoming overloaded.
+	2.Local Caching and Failover: Store menu data and critical information locally on each smart pad to minimize cloud dependency and allow offline operation during short network outages.
+
+Q5.Describe one method to integrate the existing inventory system with Bistro 92’s new system without disrupting operations.
+Answer:
+	API-Based Middleware Integration:
+	A middleware software can be developed that can connect the ordering service with the inventory via API.The middleware can synchronize stock levels asynchronously,it will ensure that the main ordering operations won't affect even if the inventory system updates in the background.
+	This approach minimizes risk and prevents downtime.
