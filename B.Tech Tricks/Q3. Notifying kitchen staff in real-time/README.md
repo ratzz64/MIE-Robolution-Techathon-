@@ -1,8 +1,8 @@
 # README for Q3 - Notifying kitchen stuff in real time
 
-## Bistro 92 Smart Ordering System - Real-Time Kitchen Notifications
+## 'Bistro 92'
 
-This solution describes how to implement a real-time notification feature for kitchen staff when a new customer order is placed, ensuring quick response and improved service speed.
+Here is a solution for notifying the ordered items to the kitchen stuffs in real time
 
 ---
 
@@ -27,10 +27,10 @@ Heroku for hosting
    A customer places an order using the table smart pad (ESP32 device).After that the smart pad sends an HTTP POST request to the Node.js server with order details.
 
 2. **Order Processing**:
-   The order is then saved to the database.After saving, the server *emits a WebSocket event* (`newOrder`) to all connected kitchen dashboard clients.
+   The order is then saved to the database.After saving, the server emits a websocket event (`newOrder`) to all connected kitchen dashboard clients.
 
 3. **Kitchen Notification**:
-   The kitchen dashboard is connected via WebSocket, *instantly receives the new order* without needing to refresh.The kitchen staff can view the new order immediately on their screen.
+   The kitchen server is connected to the Websocket.So the the stuffs are notified quickly without needing to refresh.
 
 ---
 
